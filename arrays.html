@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Arrays</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <script>
+    const names = ['josip', 'diana', 'milla'];
+
+    console.log(names[0]);
+    console.log(names.length);
+    console.log(name[names.length - 1]);
+
+    names.push('pax');
+    console.log(names);
+    const name2 = [...names, 'pax'];
+    names.unshift('pluto');
+    console.log(names);
+    const names3 = ['poppy', ...names];
+    console.log(names3);
+
+    const bikes = ['bianchi', 'miele', 'rog joma', 'panasonic', 'miyata'];
+    const newBikes = [
+      ...bikes.slice(0,2),
+      'benoto',
+      ...bikes.slice(2)
+    ];
+    console.log(newBikes);
+
+    const newBikes2 = [
+      ...newBikes.slice(0,3),
+      ...newBikes.slice(4),
+    ];
+
+    console.log(newBikes2);
+
+    const comments = [
+      { text: 'Cool Beans', id: 123 },
+      { text: 'Cool Beans', id: 133 },
+      { text: 'Cool Beans', id: 233 },
+      { text: 'Cool Beans', id: 333 },
+      { text: 'Cool Beans', id: 433 },
+    ];
+
+    function deleteComment(id, comments) {
+      // first find the index of the item in the array
+      const commentIndex = comments.findIndex(comment => 
+      comment.id === id);
+      // make a new array without that item in it
+      return [
+        ...comments.slice(0, commentIndex),
+        ...comments.slice(commentIndex + 1),
+      ];
+      // return our new array
+    } 
+
+    const dianaIndex = names.findIndex(name => name === 'diana');
+    const newNamesWithoutDiana = [
+      // get everything up to Diana index
+      ...names.slice(0, dianaIndex),
+      //everything after Diana index
+      ...names.slice(dianaIndex + 1) 
+    ].flat();
+    console.log(newNamesWithoutDiana);
+    
+    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+
+    // numbers.splice(3,2);
+    // console.log(numbers)
+
+    // Mutation Method - They do change original data
+    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+    // anytime you want to use a mutation method and NOT
+    // mutate original array 
+    // we nedd to take a copy of the array
+    // const numbersReversed = [...numbers].reverse();
+    // console.log(numbersReversed);
+    // number.reverse();
+    // console.log(numbers);
+
+    // Immutable Method - They do not change original data
+    // const pizzaSlice = numbers.slice(2,5);
+    // console.log(pizzaSlice);
+    // console.log(numbers);
+
+  </script>
+</body>
+
+</html>
