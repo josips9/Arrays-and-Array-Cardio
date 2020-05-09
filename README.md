@@ -4,9 +4,11 @@ What is an Array? Array is used for holding a list of items where order matters.
 
 :point_right: Main difference between arrays and object is that arrays has no keys. Keys in arrays are indexes.
 
-:bulb: At the end of the day, array is an object. *type of* (const) *names* is "object". 
+:bulb: At the end of the day, array is an object. 
 
-Array.isArray(names) is for checking if something is actually array 
+*type of* (const) *names* is "object". 
+
+**Array.isArray**(names) is for checking if something is actually array 
 
 Arrays are zero based! Counts from 0 - 
 
