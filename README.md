@@ -1,5 +1,7 @@
 # Arrays and Array Cardio Exercise
 
+[Visit Wesbos website for more information about course](https://beginnerjavascript.com/)
+
 What is an Array? Array is used for holding a list of items where order matters. Each thing inside array is called item and its position is called INDEX. Each item inside an array can be anything, any type (string, boolean, another array...)
 
 :point_right: Main difference between arrays and object is that arrays has no keys. Keys in arrays are indexes.
@@ -18,4 +20,3 @@ Slice & splice method. The *splice()* method changes the contents of an array by
 
 Watch again from 24:30 
 
-[Visit Wesbos website for more information about course](https://beginnerjavascript.com/)
